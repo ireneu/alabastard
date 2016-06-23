@@ -14,14 +14,13 @@ with codecs.open('README.rst', encoding='utf-8') as f:
     readme = f.read()
 
 setup(
-    name='alabaster',
+    name='alabastard',
     version=version,
-    description='A configurable sidebar-enabled Sphinx theme',
+    description='Son of alabaster: A configurable sidebar-enabled Sphinx theme',
     long_description=readme,
-    author='Jeff Forcier',
-    author_email='jeff@bitprophet.org',
-    url='https://alabaster.readthedocs.io',
-    packages=['alabaster'],
+    author='Ireneu Pla',
+    author_email='ireneup@gmail.com',
+    packages=['alabastard'],
     include_package_data=True,
     classifiers=[
         'Intended Audience :: Developers',

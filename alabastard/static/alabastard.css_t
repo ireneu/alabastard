@@ -266,6 +266,13 @@ dt:target, .highlight {
     background: #FAF3E8;
 }
 
+dt {
+    background-color: #EEE;
+    border: 1px solid trasparent;
+    border-radius: 2px;
+    padding: 1px 10px;
+}
+
 div.note {
     background-color: {{ theme_note_bg }};
     border: 1px solid {{ theme_note_border }};
@@ -361,6 +368,11 @@ table.field-list p {
     margin-bottom: 0.8em;
 }
 
+.field-name {
+  font-family: "Menlo", monospace;
+  width: 125px;
+}
+
 table.footnote td.label {
     width: .1px;
     padding: 0.3em 0 0.3em 0.5em;
@@ -368,6 +380,10 @@ table.footnote td.label {
 
 table.footnote td {
     padding: 0.3em 0.5em;
+}
+
+tr {
+  border-bottom: 10px solid transparent;
 }
 
 dl {
@@ -631,4 +647,8 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+table.docutils.field-list {
+  width: 100%;
 }

@@ -268,9 +268,9 @@ dt:target, .highlight {
 
 dt {
     background-color: #EEE;
-    border: 1px solid trasparent;
+    border: 1px solid transparent;
     border-radius: 2px;
-    padding: 1px 10px;
+    padding: 0 10px;
 }
 
 div.note {
@@ -477,6 +477,13 @@ a:hover tt, a:hover code {
     background: #EEE;
 }
 
+.expander, .expander:hover {
+    text-decoration: none;
+}
+ /* Creates space between collapsed methods */
+.class dd dl dt {
+    margin-top: 5px;
+}
 
 @media screen and (max-width: 870px) {
 

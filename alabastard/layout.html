@@ -42,6 +42,22 @@
 {%- endblock %}
 
 {%- block footer %}
+    <script src="{{ pathto('_static/simple-expand.min.js', 1) }}"></script>
+    <script>
+    $(".class dd dl dt code").each(function () {
+        // Can't use .nextUntil() because commas are left out since they're not wrapped
+        var selectedElements = $(this);
+        var nextElement = this.nextSibling;
+        while (nextElement) {
+            if (!$(nextElement).is('a')) {
+                selectedElements.push(nextElement);
+                nextElement = nextElement.nextSibling;
+            } else break;
+        }
+        selectedElements.wrapAll("<a class='expander'></a>")
+    });
+    $(".expander").simpleexpand({'defaultTarget': 'dd'});
+    </script>
     <div class="footer">
       {% if show_copyright %}&copy;{{ copyright }}.{% endif %}
       {% if theme_show_powered_by|lower == 'true' %}

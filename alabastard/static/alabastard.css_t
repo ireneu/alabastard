@@ -368,6 +368,10 @@ table.field-list p {
     margin-bottom: 0.8em;
 }
 
+p.rubric {
+    background-color: rgb(255, 248, 220);
+}
+
 .field-name {
   font-family: "Menlo", monospace;
   width: 125px;
@@ -387,8 +391,13 @@ table.footnote td {
 }
 
 dl {
+    clear: both;
     margin: 0;
     padding: 0;
+}
+
+dl.class {
+    margin-bottom: 30px;
 }
 
 dl dd {

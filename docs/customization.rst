@@ -104,6 +104,9 @@ Variables and feature toggles
      ``$PROJECT/_static/``) to be used as the banner image instead of the
      default.
 
+* ``badge_branch``: Set which branch is used in Travis, CodeCov, etc badges.
+  Defaults to ``master``.
+
 * ``travis_button``: ``true``, ``false`` or a Github-style ``"account/repo"``
   string - used to display a `Travis-CI <https://travis-ci.org>`_ build status
   button in the sidebar. If ``true``, uses your ``github_(user|repo)``
@@ -134,12 +137,16 @@ Variables and feature toggles
 
 * ``extra_nav_links``: Dictionary mapping link names to link targets; these
   will be added in a UL below the main sidebar navigation (provided you've
-  enabled ``navigation.html``.) Useful for static links outside your Sphinx
-  doctree.
+  enabled ``navigation.html`` via the ``html_sidebars`` option; see
+  :doc:`installation`.) Useful for static links outside your Sphinx doctree.
 * ``sidebar_includehidden``: Boolean determining whether the TOC sidebar
   should include hidden Sphinx toctree elements. Defaults to ``true`` so you
   can use ``:hidden:`` in your index page's root toctree & avoid having 2x
   copies of your navigation on your landing page.
+* ``sidebar_collapse``: Boolean determining whether  all TOC entries that 
+   are not ancestors of the current page are collapsed.
+   You can read more about this in the Sphinx toctree 
+   `docs <http://www.sphinx-doc.org/en/stable/templating.html#toctree>`_.
 * ``show_powered_by``: Boolean controlling display of the ``Powered by
   Sphinx N.N.N. & Alabaster M.M.M`` section of the footer. When ``true``, is
   displayed next to the copyright information; when ``false``, is hidden.

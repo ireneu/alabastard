@@ -2,6 +2,35 @@
 Changelog
 =========
 
+* :support:`- backported` Miscellaneous project maintenance updates such as
+  adding to Travis CI and enforcing the use of ``flake8``.
+* :feature:`110 backported` Add ``badge_branch`` option allowing
+  configurability of which specific Git branch the Travis, Codecov, etc buttons
+  default to. Credit: ``@TitanSnow``.
+* :support:`111 backported` Add setuptools-level entrypoint for improved theme
+  distribution compatibility. Thanks to Aaron Carlisle for the patch.
+* :release:`0.7.10 <2017-02-28>`
+* :bug:`32` Update styling of various block-level elements such as admonitions
+  (``.. note::``, ``.. warning::``, etc) and code blocks (``.. code::``) so
+  they are no longer 'dedented' outside the main column of text they're
+  embedded in. This is both a stylistic change and a bugfix, since e.g. nesting
+  code blocks *within* note blocks looks actively broken. Thanks to Takayuki
+  Shimizukawa for the report.
+* :bug:`96` ``admonition_xref`` had a template typo preventing it from
+  receiving styling; this has been fixed. Credit: Kenzie Togami.
+* :bug:`95` Independently ran across
+  `sphinx-doc/sphinx#3276 <https://github.com/sphinx-doc/sphinx/issues/3276>`_,
+  namely that parameter lists become squashed together if one is running on
+  Sphinx 1.4.x. While that fix was merged in Sphinx itself, we felt it prudent
+  to include it in our own stylesheet as well, for immediate relief.
+* :release:`0.7.9 <2016-07-25>`
+* :feature:`6` (and :issue:`70`, both via :issue:`84`) Make all remaining
+  hardcoded style colors configurable, plus related cleanup (such as improving
+  differentiation of some admonition blocks such as ``warn`` and ``note``,
+  ensuring generic admonitions are left untouched, etc). Credit:
+  ``@ShadowKyogre``.
+* :feature:`83` Expose Sphinx's toctree ``collapse`` option as the new
+  ``sidebar_collapse`` config option. Credit: Eric Holscher.
 * :feature:`80` Add support for ``<link rel="canonical">`` (i.e. canonical
   URLs). Thanks to Ben Gamari for the patch.
 * :support:`7` Generate real documentation site, both because the README is
